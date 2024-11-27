@@ -2,7 +2,7 @@
 
 int main(){
     // Max of 2 numbers
-    /*int n1,n2;
+    int n1,n2;
     printf("Enter 1st number: ");
     scanf("%d",&n1);
     printf("Enter 2nd number: ");
@@ -15,11 +15,11 @@ int main(){
     }
     else{
         printf("%d is greater than %d",n2,n1);
-    }*/
+    }
 
 
     //Max of 3 numbers
-    /*int n1,n2,n3;
+    int n1,n2,n3;
     printf("Enter 1st number: ");
     scanf("%d",&n1);
     printf("Enter 2nd number: ");
@@ -37,11 +37,11 @@ int main(){
     else{
         printf("%d is the greatest of the three numbers",n3);
 
-    }*/
+    }
 
 
     //Check wether a number is positive negative or zero
-    /*int a;
+    int a;
     printf("Enter number: ");
     scanf("%d",&a);
     if (a<0){
@@ -52,10 +52,10 @@ int main(){
     }
     else{
         printf("%d is a positive number",a);
-    }*/
+    }
 
     //Check wether a number is divisable by 5 and 11
-    /*int a;
+    int a;
     printf("Enter number: ");
     scanf("%d",&a);
     if(a%5 == 0 && a%11 == 0){
@@ -63,10 +63,10 @@ int main(){
     }
     else{
         printf("No %d number is not divisible by either 5 or 11 or both",a);
-    }*/
+    }
 
    //Check wether a number is odd or even
-    /*int a;
+    int a;
     printf("Enter number: ");
     scanf("%d",&a);
     if(a%2 == 0){
@@ -74,11 +74,11 @@ int main(){
     }
     else{
         printf("%d is an odd number",a);
-    }*/
+    }
 
 
     //Check wether a year is leap year or notep
-    /*int y;
+    int y;
     printf("Enter year: ");
     scanf("%d",&y);
     if(y%4 == 0 || y%400 == 0){
@@ -86,10 +86,10 @@ int main(){
     }
     else{
         printf("%d is not a leap year",y);
-    }*/
+    }
 
     //check wether a character is alphabet or not
-    /*char a;
+    char a;
     printf("Input a charcter: ");
     scanf("%c",&a);
     switch (a)
@@ -103,11 +103,11 @@ int main(){
     default:
         printf("Not an alphabet");
         break;
-    }*/
+    }
 
 
     //Check wether an alphabet is a consonant or a vowel.
-    /*char a;
+    char a;
     printf("Input a charcter: ");
     scanf("%c",&a);
     int i = 0;
@@ -117,8 +117,6 @@ int main(){
     else{
         printf("%c is a consonant",a);
     }
-
-
     /*
     Ignore
     .
@@ -154,7 +152,7 @@ int main(){
 
 
     //Check wether a character is alphabet number or special character
-    /*char a;
+    char a;
     printf("Input a charcter: ");
     scanf("%c",&a);
     switch (a)
@@ -171,10 +169,10 @@ int main(){
     default:
         printf("%c is a special character",a);
         break;
-    }*/
+    }
 
     //Check if the alphabet is uppercase or lowercase
-    /*char a;
+    char a;
     printf("Input a charcter: ");
     scanf("%c",&a);
     switch (a)
@@ -185,10 +183,10 @@ int main(){
     case 'A' ... 'Z':
         printf("%c is an uppercase alphabet",a);
         break;
-    }*/
+    }
 
     //Enter number and print week day
-    /*int n;
+    int n;
     printf("Input week number: ");
     scanf("%d",&n);
     switch (n){
@@ -216,10 +214,10 @@ int main(){
     default:
         printf("Invalid Input");
         break;
-    }*/
+    }
 
     //Input month number and print days in that month
-    /*int m;
+    int m;
     printf("Input week number: ");
     scanf("%d",&m);
     if (m == 1|| m ==3|| m ==5|| m == 7|| m == 8||m == 10|| m ==12){
@@ -230,10 +228,10 @@ int main(){
     }
     else{
         printf("30 Days");
-    }*/
+    }
     
     //Write program to count total number of notes in a given amount
-    /*int a;
+    int a;
     int temp;
     printf("Enter Amount: ");
     scanf("%d",&a);
@@ -289,11 +287,11 @@ int main(){
     printf("5 notes: %d\n",n5);
     printf("2 notes: %d\n",n2);
     printf("1 notes: %d\n",n1);
-    */
+    
 
 
     //Input angles of a triangle and check if it is valid or not
-    /*int a,b,c;
+    int a,b,c;
     printf("Enter Angle 1: ");
     scanf("%d",&a);
     printf("Enter Angle 2: ");
@@ -305,10 +303,10 @@ int main(){
     }
     else{
         printf("Invalid angles for a triangle");
-    }*/
+    }
 
     //Enter sides of a triangle and check wether triangle is valid or not
-    /*int a,b,c;
+    int a,b,c;
     int check;
     printf("Enter side 1: ");
     scanf("%d",&a);
@@ -322,10 +320,10 @@ int main(){
     }
     else{
         printf("Invalid sides for triangle");
-    }*/
+    }
     
     //Check wether a triangle is equilateral isosceles or scalene
-    /*int a,b,c;
+    int a,b,c;
     printf("Enter side 1: ");
     scanf("%d",&a);
     printf("Enter side 2: ");
@@ -334,6 +332,121 @@ int main(){
     scanf("%d",&c);
     if(a==b && b==c){
         printf("Equilateral Triangle");
-    }*/
+    }
+    else if(a==b || b==c || c==a){
+        printf("Isosceles Triangle");
+    }
+    else{
+        printf("Scalene Triangle");
+    }
+
+
+    //Find all roota of a quadratic equation
+    // NAAHHH🗣️🗣️🗣️🗣️🗣️
+
+    //Find profit or loss
+    int a,b, amt; 
+    printf("Enter cost price: ");
+    scanf("%d", &a);
+    printf("Enter selling price: ");
+    scanf("%d", &b);
+    
+    if(b > a)
+    {
+        amt = b - a;
+        printf("Profit = %d", amt);
+    }
+    else if(a > b)
+    {
+        amt = a - b;
+        printf("Loss = %d", amt);
+    }
+    else
+    {
+        printf("No Profit No Loss.");
+    }
+
+    //Enter marks of 5 subjects and calculate grade
+    int s1,s2,s3,s4,s5,total,p;
+    printf("Marks out of 100\n");
+    printf("Enter Marks for 1st subject: ");
+    scanf("%d",&s1);
+    printf("Enter Marks for 2nd subject: ");
+    scanf("%d",&s2);
+    printf("Enter Marks for 3rd subject: ");
+    scanf("%d",&s3);
+    printf("Enter Marks for 4th subject: ");
+    scanf("%d",&s4);
+    printf("Enter Marks for 5th subject: ");
+    scanf("%d",&s5);
+    total = s1+s2+s3+s4+s5;
+    p = total/5;
+    // printf("%d",p);
+    if (p>=90){
+        printf("Grade: A");
+    }
+    else if (p>=80){
+        printf("Grade: B");
+    }
+    else if (p>=70){
+        printf("Grade: C");
+    }
+    else if (p>=60){
+        printf("Grade: D");
+    }
+    else if (p>=50){
+        printf("Grade: E");
+    }
+    else if (p<=40){
+        printf("Grade: F");
+    }
+
+    //Find Gross salary of an employee
+    float a, gross, b, hra;
+    printf("Enter normal salary: ");
+    scanf("%f", &a);
+
+    if(a <= 10000){
+        b  = a * 0.8;
+        hra = a * 0.2;
+    }
+    else if(a <= 20000){
+        b  = a * 0.9;
+        hra = a * 0.25;
+    }
+    else{
+        b  = a * 0.95;
+        hra = a * 0.3;
+    }
+    gross = a + hra + b;
+
+    printf("Gross Salary : %.2f", gross);
+
+    //Calculate electricity bill based on units used and add 20% sur charge
+    int a;
+    float b, total_amt, sur;
+    printf("Enter total units consumed: ");
+    scanf("%d", &a);
+
+    if(a <= 50)
+    {
+        b = a * 0.50;
+    }
+    else if(a <= 150)
+    {
+        b = 25 + ((a-50) * 0.75);
+    }
+    else if(a <= 250)
+    {
+        b = 100 + ((a-150) * 1.20);
+    }
+    else
+    {
+        b = 220 + ((a-250) * 1.50);
+    }
+    sur = b * 0.20;
+    total_amt  = b + sur;
+
+    printf("Electricity Bill = Rs. %.2f", total_amt);
     
 }
