@@ -402,23 +402,23 @@ int main(){
     }
 
     //Find Gross salary of an employee
-    float a, gross, b, hra;
+    float a, gross, b, h;
     printf("Enter normal salary: ");
     scanf("%f", &a);
 
     if(a <= 10000){
         b  = a * 0.8;
-        hra = a * 0.2;
+        h = a * 0.2;
     }
     else if(a <= 20000){
         b  = a * 0.9;
-        hra = a * 0.25;
+        h = a * 0.25;
     }
     else{
         b  = a * 0.95;
-        hra = a * 0.3;
+        h = a * 0.3;
     }
-    gross = a + hra + b;
+    gross = a + h + b;
 
     printf("Gross Salary : %.2f", gross);
 
