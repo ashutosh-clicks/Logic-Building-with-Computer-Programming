@@ -131,7 +131,7 @@ int main(){
 
     //Simple calculator using switch case
 
-    char c;
+    /*char c;
     int a, b;
     int p;
 
@@ -162,9 +162,9 @@ int main(){
         }
     } else {
         printf("Invalid operation. Please use +, -, *, or /.\n");
-    }
+    }*/
 
-    return 0;
+    
 }
 
 
