@@ -8,27 +8,34 @@ int board(){
         for(int j = 0; j < 10; j++){
             printf(". ");
         }
-        printf("%d", i);
+        printf("%d", i+1);
         printf("\n");
     }
 }
-int dice(){
+/*int dice(){
     return rand() % 6 + 1;
-}
+}*/
 int main(){
      board();
     int player1;
     int gamestate;
     gamestate = 0;
 
-    if(gamestate == 0){
+    while(gamestate == 0){
         printf("*\n");
         printf("Press any key to start.");
         char start;
-        if(start == getch()){
+        if(start = getch()){
             gamestate = 1;
         }
     }
 
+    while(gamestate == 1){
+        int play = (rand() % 6)+ 1;
+        printf("%d",play);
+        break;
+    }
+
 }
+
 
