@@ -2,7 +2,7 @@
 
 int main(){
     // Day of week using switch case
-    /*int a;
+    int a;
     printf("Enter week day: ");
     scanf("%d",&a);
     switch (a)
@@ -28,10 +28,10 @@ int main(){
     case 7:
         printf("Sunday");
         break;
-    }*/
+    }
 
     //Days in a month 
-    /*int a;
+    int a;
     printf("Enter Month Number: ");
     scanf("%d",&a);
     switch (a){
@@ -43,10 +43,10 @@ int main(){
             break;
         default:
             printf("30 days");
-    }*/
+    }
 
     //Check wether a alphabet is vowel or consonant
-    /*char a;
+    char a;
     printf("Enter alphabet: ");
     scanf("%c",&a);
     switch (a)
@@ -70,10 +70,10 @@ int main(){
     default:
         printf("%c is a consonant",a);
         break;
-    }*/
+    }
 
     //Max of two numbers using switch case
-    /*int a,b,c,d;
+    int a,b,c,d;
     printf("Enter 1st Number: ");
     scanf("%d",&a);
     printf("Enter 2nd Number: ");
@@ -87,10 +87,10 @@ int main(){
     default:
         printf("%d is bigger than %d",b,a);
         break;
-    }*/
+    }
 
     //Check for odd or even
-    /*int a;
+    int a;
     printf("Enter 1st Number: ");
     scanf("%d",&a);
     switch (a%2)
@@ -102,10 +102,10 @@ int main(){
     default:
         printf("Odd");
         break;
-    }*/
+    }
 
     //Check for positive negative or 0;
-    /*int a;
+    int a;
     printf("Enter Number: ");
     scanf("%d",&a);
     switch (a>0)
@@ -126,12 +126,12 @@ int main(){
             break;
         }
         break;
-    }*/
+    }
 
 
     //Simple calculator using switch case
 
-    /*char c;
+    char c;
     int a, b;
     int p;
 
@@ -162,11 +162,7 @@ int main(){
         }
     } else {
         printf("Invalid operation. Please use +, -, *, or /.\n");
-    }*/
+    }
 
     
 }
-
-
-
-
