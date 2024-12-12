@@ -143,5 +143,17 @@ int main(){
     }
     printf("%d",sum);*/
 
+
+    //Loop to find product of all digits of a number
+    int n,prod,temp;
+    printf("Enter a number");
+    scanf("%d",&n);
+    prod = 0;
+    while(n!=0){
+        prod = prod * (n % 10);
+        n = n / 10;
+        
+    }
+    printf("%d",prod);
     
 }
