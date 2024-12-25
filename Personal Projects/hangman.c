@@ -27,7 +27,7 @@ int main(){
             scanf("%c\n",&guess);
             n++;
         }
-
+        
         
 
         
