@@ -1,37 +1,22 @@
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 
-int main(){
-    char word[12];
-    printf("Enter Your Word: ");
-    scanf("%s",&word);
-    char guess;
-    int gamestate = 0;
-    int n = 1;
-    int length = strlen(word);
-
-
-    while (gamestate == 0){
-
-        
-
-        for(int i = 0; i<length;i++ ){
-            if(word[i] == guess){
-                printf("%c",word[i]);
-            }
-            else{
-                printf("_");
-            }
-            // printf("_");
-            printf("Your %d guess: ",n);
-            scanf("%c\n",&guess);
-            n++;
-        }
-        
-        
-
-        
-        
+int addtwo(){
+    int l1[] = {2,4,3};
+    int l2[] = {5,6,4};
+    // printf("%d\n",sizeof(l1));
+    int num1 = 0;
+    int sum1 = 0;
+    int length = (sizeof(l1))/4;
+    for(int i = length-1; i>=0; i--){
+        printf("%d\n",l1[i]);
+        int n = l1[i];
+        sum1 += n * (pow(10,i));
+        printf("%d\n",sum1);
     }
 
+}
+
+int main(){
+    addtwo();
 }

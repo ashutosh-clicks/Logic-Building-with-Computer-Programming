@@ -83,7 +83,7 @@ int main(){
 
    
     //Loop to count digits in a number
-    /*int a;
+    int a;
     printf("Enter a number: ");
     scanf("%d",&a);
     int count = 0;
@@ -91,7 +91,7 @@ int main(){
         a = a/10;
         count++;
     }
-    printf("%d",count);*/
+    printf("%d",count);
 
     //Loop to print first and last digit of a number
     /*int a,f,l,temp;
@@ -132,7 +132,7 @@ int main(){
 
 
     //Loop to find sum of all digits of a number
-    /*int n,sum,temp;
+   /* int n,sum,temp;
     printf("Enter a number");
     scanf("%d",&n);
     temp = n;
@@ -145,7 +145,7 @@ int main(){
 
 
     //Loop to find product of all digits of a number
-    int n,prod,temp;
+    /*int n,prod,temp;
     printf("Enter a number");
     scanf("%d",&n);
     prod = 0;
@@ -155,5 +155,5 @@ int main(){
         
     }
     printf("%d",prod);
-    
+    */
 }
