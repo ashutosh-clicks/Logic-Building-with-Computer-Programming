@@ -19,13 +19,14 @@ int main() {
         j++;
         if(binary[i] == 49 and i!= 0){
             power = power + (pow(2,j));
+
             // power++;
         }
-        cout<<power<<endl;
 
     }
+    // cout<<power<<endl;
 
-
+    printf("%d",power);
 
     return 0;
 }
