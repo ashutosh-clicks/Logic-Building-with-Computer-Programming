@@ -29,13 +29,34 @@ int main() {
     // printf("%d",power);
 
 
-    int number;
-    int count;
-    for (int i = 0; number > 0; i++) {
-            count++;
-            number = number/10;
+    /*int i,a,x,b,c;
+
+    for(int i = 0; i <=999;i++){
+        a = i%10;
+        x = i%10;
+        b = x%10;
+        c = x%10;
+
+        if(a*a*a + b*b*b + c*c*c == i){
+            cout<<"Number"<<endl;
+        }
+    }*/
+    
+
+    //Program to find a 4 digit perfect square whose first 2 and last 2 digits
+    // are also perfect sqauares
+    int s = 1681;
+    int a,b;
+    for(int i = 1000; i <= 9999; i++){
+        a = s%100;
+        b = s/100;
     }
-    int i = 
-    int power  = pow(number[1],power);
+    int roota = sqrt(a);
+    int rootb = sqrt(b);
+    
+    if(sqrt(a) == roota && rootb == rootb){
+        cout<<"Entered number is a Perfect square";
+    }
+
     return 0;
 }
