@@ -45,7 +45,7 @@ int main() {
 
     //Program to find a 4 digit perfect square whose first 2 and last 2 digits
     // are also perfect sqauares
-    int s = 1681;
+    /*int s = 1681;
     int a,b;
     for(int i = 1000; i <= 9999; i++){
         a = s%100;
@@ -56,6 +56,48 @@ int main() {
     
     if(sqrt(a) == roota && rootb == rootb){
         cout<<"Entered number is a Perfect square";
+    }*/
+
+    //Program to calcutate factorial of a number
+    /*int a;
+    cout<<"Enter Number";
+    cin>>a;
+    int f = 1;
+    for(int i = 1; i<= a; i++){
+        f = i*f;
+        cout<<f<<endl;
+
+    }*/
+
+    //Program to find x^y
+    /*int b,p;
+    cout<<"Enter Base";
+    cin>>b;
+    cout<<"Enter Power";
+    cin>>p;
+
+    int sol = pow(b,p);
+    cout<< sol;*/
+
+
+    //Program to check prime or not
+    int a;
+    cout<<"Enter Number";
+    cin>>a;
+    int count = 0;
+    for(int i = 1;i<=a;i++){
+        // cout<<floor(a/i)<<endl;
+        if(a%i == 0){
+            count++;
+        }
+        // cout<<count;
+    }
+
+    if(count>2){
+        cout<<"Not a Prime";
+    }
+    else{
+        cout<<"Prime";
     }
 
     return 0;
