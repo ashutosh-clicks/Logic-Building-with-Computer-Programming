@@ -1,3 +1,3 @@
-if(bill>1000)
-    //     bill = bill - discount;
-    //     cout<<bill;
+string get_first_name(string first_name){
+  return first_name;
+}

@@ -103,7 +103,7 @@ void deleteAtidx(int *arr,int size,int idx)
 int main()
 {
     int size;
-    //cout<<"enter size";
+    cout<<"enter size";
     cin>>size;
     int *arr=new int[size];
     insertAtBegining(arr,size,10);

@@ -81,7 +81,7 @@ int main() {
 
 
     //Program to check prime or not
-    int a;
+    /*int a;
     cout<<"Enter Number";
     cin>>a;
     int count = 0;
@@ -98,7 +98,58 @@ int main() {
     }
     else{
         cout<<"Prime";
+    }*/
+
+    //Nested Loops
+    /*
+    //Right side star
+    for(int i = 0; i<6;i++){
+        for(int j =0; j<i;j++){
+            cout<<"*";
+        }
+        cout<<"*"<<endl;
+    
+    }*/
+
+    //numver loop
+
+    /*for(int i = 0; i<6;i++){
+        for(int j =0; j<i;j++){
+            cout<<j+1;
+        }
+        cout<<i+1<<endl;
+    
+    }*/
+
+
+    //Equilateral Triangle
+    /*for(int i = 1; i<=5;i++){
+        for(int k = 1;k<=20-i;k++){
+            cout<<" ";
+        }
+        for(int j = 1; j<= i;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }*/
+
+
+    //
+    
+    for(int i = 9; i>=1;i--){
+        
+        for(int j = 1;j<=2*i;j++){
+            cout<<" ";
+        }
+        for(int k = 9;k>=i;k--){
+            cout<<i<<" ";
+        }
+        
+        cout<<endl;
     }
+
+
+
 
     return 0;
 }
