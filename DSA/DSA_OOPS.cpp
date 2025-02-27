@@ -1,24 +1,24 @@
-#include <iostream>
 #include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
-class A{
-  private:
-  int x;
 
-  public:
-  void setter(int x){
-    y = x;
-  }
-  int y;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n;   
+    cin>>n;
+    int arr[n];
+    for(int i = 0; i<=n;i++){
+      arr[i] = i;
+    }
+    
+    for(int i = 0; i<=n;i++){
+      int arr2[p];
+      
+    }
 
-  void getter(){
-    cout<<y;
-  };
-};
-int main(){
-    A obj1;
-    obj1.setter(89);
-    obj1.getter();
     return 0;
 }
