@@ -2,7 +2,26 @@
 #include<cmath>
 using namespace std;
 
+
+int add(){
+    int n;
+    cin>>n;
+    int sum = 0;
+    int arr[n];
+
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(auto i:arr){
+
+        sum += arr[i];
+    }
+    cout<<sum;
+    return 1;
+
+}
 int main() {
+    add();
 	// string binary;
     // cin>>binary;
 
@@ -136,7 +155,7 @@ int main() {
 
     //
     
-    for(int i = 9; i>=1;i--){
+    /*for(int i = 9; i>=1;i--){
         
         for(int j = 1;j<=2*i;j++){
             cout<<" ";
@@ -146,7 +165,7 @@ int main() {
         }
         
         cout<<endl;
-    }
+    }*/
 
 
 

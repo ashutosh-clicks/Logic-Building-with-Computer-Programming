@@ -1,4 +1,3 @@
-deleteAtBegining(arr,size);
-//    deleteAtidx(arr,size,0);
-//    deleteAtidx(arr,size,0);
-//    deleteAtidx(arr,size,0);
+for(int i = 0;i<size;i++){
+        //     arr[i+1] = arr[i];
+        // }
