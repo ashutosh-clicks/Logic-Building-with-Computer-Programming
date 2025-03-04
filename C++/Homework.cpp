@@ -20,8 +20,37 @@ int add(){
     return 1;
 
 }
+
+
+void diagsum(){
+    int s1=0,s2=0;
+    int a[3][3] = {1,2,3,4,5,6,7,8,9};
+    for(int i = 0;i<=2;i++){
+        for(int j = 0;j<= 2; j++){
+            cin>>a[i][j];
+        }
+    }
+    
+    for(int i = 0;i<=2;i++){
+        s1 += a[i][i];
+    }
+    for(int i = 0,j=2;i<=2;i++,j--){
+        s2 += a[i][j];
+    } 
+    cout<<s2<<" "<<s1;
+}
+
+void sum(int x,int y){
+    cout<<x+y;
+}
 int main() {
-    add();
+    int i = 2;
+    cout<<&i<<endl;
+    cout<<*(&i)<<endl;
+    cout<<i;
+    // cout<<sizeof(string);
+    // diagsum();
+    // add();
 	// string binary;
     // cin>>binary;
 

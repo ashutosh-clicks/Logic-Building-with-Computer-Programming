@@ -1,35 +1,37 @@
 #include <iostream>
 using namespace std;
 
-class Rectangle{
+class Node{
    public:
-       int width;
-       int height;
-   void display(){
-      width = Rectangle::width;
-      height = Rectangle::height;
-      cout<<width<<" "<<height<<endl;
+   int data;
+   Node* next;
+
+   Node(int val){
+      data = val;
+      next = NULL;
    }
- 
+
 };
-class RectangleArea : public Rectangle{
-    public:
-    
-    void read_input(){
-      cin>>width;
-      cin>>height;
-    }
-    void display(){
-      cout<<width*height;
-    }
-};  
+
+void linkedList(Node* head){
+   Node* temp =  head;
+
+   if(head != NULL){
+      cout<<temp->data<<"->";
+      temp = temp->next;
+   }
+   cout<<"NULL"<<endl;
+
+};
 
 int main(){
-   RectangleArea r_area;
-   r_area.read_input();
+   Node* head = new Node(10);
+   Node *second = new Node(20);
+   Node* third = new Node(30);
 
-   // r_area.Rectangle::display();
-   r_area.display();
-
-   return 0;
+   head->next = second;
+   second->next = third;
+   
+   linkedList(head);
+   
 }
