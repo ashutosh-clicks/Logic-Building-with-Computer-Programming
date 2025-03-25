@@ -3,6 +3,9 @@
 #include <algorithm>
 using namespace std;
 
+class Feet{
+
+};
 
 void rtri(){
     for(int i = 0;i<=5;i++){

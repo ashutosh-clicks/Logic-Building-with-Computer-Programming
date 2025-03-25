@@ -20,7 +20,7 @@ void linkedList(Node* head){
 
    while(head != NULL){
       cout<<temp->data<<"->";
-      temp = temp->prev;
+      temp = temp->next;
    }
    cout<<"NULL"<<endl;
 
@@ -33,9 +33,11 @@ int main(){
 
    head->next = second;
    second->next = third;
-   third->prev = second;
-   second->prev = head;
+   // third->prev = second;
+   // second->prev = head
    
    linkedList(third);
    
 }
+
+//Chut paglu harkate 
