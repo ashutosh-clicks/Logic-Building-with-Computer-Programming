@@ -60,7 +60,7 @@ void shifting(){
 
     cout<<endl;
     i = 0;
-    while(i<size){
+    while(i<size/* && (i+d) < size*/){
         arr[i] = arr[i+d];
         i++;
     }
