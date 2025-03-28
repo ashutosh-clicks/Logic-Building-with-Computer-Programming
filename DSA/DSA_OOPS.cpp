@@ -39,5 +39,3 @@ int main(){
    linkedList(third);
    
 }
-
-//Chut paglu harkate 

@@ -1,72 +1,101 @@
 #include <iostream>
-
 using namespace std;
 
-class node{
+class Node{
+
     public:
     int data;
-    node* next;
-    node * prev;
+    Node* next;
+    Node *prev;
 
-    node(int data){
-        this->data = data;
-        this->next = nullptr;
-        this->prev = NULL;
+    Node(){
+        data = 0;
+        next = NULL;
     }
-};
-
-class DLL{
-    public:
-    node *head;
-    node *tail;
-
-    DLL(){
-    head == NULL;
-    tail == NULL;
-    }
-
-    void printF(node * head){
-        node *temp = head;
-        cout<<"DLL in forward"<<endl;
-        while(temp){
-            cout<<temp->data<<"->";
-            temp= temp->next;
-        }
-        cout<<"NULL"<<endl;
-    }
-
-    void printB(node *tail){
-        node *temp = tail;
-        cout<<"DLL In backward"<<endl;
-        while(temp!=NULL){
-            cout<<temp->data<<"->";
-            temp = temp->prev;
-        }
-        cout<<"NULL"<<endl;
+    Node(int a){
+        data  = a;
+        next = NULL;
     }
 
 };
+
+void printForward(Node* head){
+    Node* temp = head;
+    while(temp != NULL){
+        cout<<temp->data<<"->";
+        temp = temp->next;
+
+    }
+    cout<<"NULL";
+}
+
+
+Node* insertAtBegin(Node *head, int newData){
+
+    Node* newNode = new Node(newData); // Create new node
+    newNode->next = head;             // Point the new node to the current head
+    return newNode;
+
+
+}
+
+Node *insertAtEnd(Node * head,int newData){
+    Node* newNode = new Node(newData);
+    if(head == NULL){
+        return newNode;
+    }
+    Node* temp = head;
+    while (temp->next != nullptr) { // Traverse to the last node
+        temp = temp->next;
+    }
+    temp->next = newNode; // Update the last node's next pointer
+    return head;          // Return the original head
+
+}
+
+Node* insertAtValue(Node* head, int newData, int value){
+    Node *temp = head;
+    while(temp!= NULL){
+        if(temp->data!=value){
+            temp = temp->next;
+        }
+        else{
+            temp->data = newData;
+        }
+
+    }
+    return head;
+
+}
 
 int main(){
-
-    DLL l1;
-    node *n1 = new node(10);
-    node *n2 = new node(20);
-    node *n3 = new node(30);
-    node *n4 = new node(40);
-
+    //Linked lIst
+    Node *n1 = new Node(10);
+    Node *n2 = new Node(20);
+    Node *n3 = new Node(30);
+    Node *n4 = new Node(40);
+    Node *n5 = new Node(50);
+    
     n1->next = n2;
     n2->next = n3;
     n3->next = n4;
-
+    n4->next = n5;
+    
+    n5->prev = n4;
     n4->prev = n3;
     n3->prev = n2;
-    n2->prev = n1;
+    n2->prev = n2;
+    
+    Node *head = n1;
+    Node *tail = n5;
+
+    //Linkd List
+    head = insertAtBegin(head,100);
+    head = insertAtEnd(head,200);
+    head = insertAtValue(head,300,60);
+    printForward(head);
 
 
-    l1.printF(n1);
-    l1.printB(n4);
 
-
-    return 0;   
+    return 0;
 }

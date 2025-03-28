@@ -84,14 +84,61 @@ void shifting(){
 
 }
 
+class Counter{
+    public:
+    int count;
+    Counter(){
+        count = 0;
+    }
+
+    int getcount(){
+        return count;
+    }
+    void operator ++(){
+        ++count;
+    }
+};
+
+class Distance{
+    public:
+    int feet;
+    float inch;
+    Distance(){
+        feet = 0;
+        inch = 0;
+    }
+    Distance(int a ,int b){
+        feet = a;
+        inch = b;
+    }
+    void getDistance(){
+        cout<<"Enter Feet";
+        cin>>feet;
+        cout<<"Enter inches";
+        cin>>inch;
+    }
+    void showDistance(){
+        cout<<endl<<feet<<""<<inch<<"";
+    }
+
+
+    
+};
+
 
 int main(){
-
-    shifting();
+    
+    // shifting();
+    // Counter c1,c2;
+    // cout<<c1.getcount()<<endl;
+    // cout<<c2.getcount()<<endl;
+    // ++c1;++c2;++c2;
+    // cout<<c1.getcount()<<endl;
+    // cout<<c2.getcount();
+    
+    Distance d1,d2;
     
     
-
-
-
+    
     return 0;
 }
