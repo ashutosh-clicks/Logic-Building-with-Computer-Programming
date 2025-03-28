@@ -92,7 +92,8 @@ int main(){
     //Linkd List
     head = insertAtBegin(head,100);
     head = insertAtEnd(head,200);
-    head = insertAtValue(head,300,60);
+    head = insertAtValue(head,300,50);
+    head = insertAtValue(head, 400, 40);
     printForward(head);
 
 
