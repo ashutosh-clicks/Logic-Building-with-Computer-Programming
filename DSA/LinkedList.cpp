@@ -68,6 +68,25 @@ Node* insertAtValue(Node* head, int newData, int value){
 
 }
 
+Node* insertBeforeValue(Node *head, int newData, int value){
+    Node* temp = head;
+    Node* tempest = temp->next;
+    // Node* newNode = new Node(newData);
+    while(temp!=NULL){
+        if(tempest->data == value){
+            temp->data = newData;
+            temp = temp->next;
+        }
+        else{
+            temp = temp->next;
+        }
+
+    }
+    return head;
+
+}
+
+
 int main(){
     //Linked lIst
     Node *n1 = new Node(10);
@@ -81,19 +100,14 @@ int main(){
     n3->next = n4;
     n4->next = n5;
     
-    n5->prev = n4;
-    n4->prev = n3;
-    n3->prev = n2;
-    n2->prev = n2;
-    
     Node *head = n1;
-    Node *tail = n5;
 
     //Linkd List
     head = insertAtBegin(head,100);
-    head = insertAtEnd(head,200);
-    head = insertAtValue(head,300,50);
-    head = insertAtValue(head, 400, 40);
+    // head = insertAtEnd(head,200);
+    // head = insertAtValue(head,300,50);
+    // head = insertAtValue(head, 400, 40);
+    head = insertBeforeValue(head,500,30);
     printForward(head);
 
 
