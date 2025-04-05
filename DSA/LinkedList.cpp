@@ -31,29 +31,34 @@ void printForward(Node* head){
     cout<<"NULL";
 }
 
-Node* insertAtBegin(Node*head,int data){
+Node* insertAtBegin(Node*head, int data){
     Node* newNode = new Node(data);
-    newNode->next = head;
+    newNode->next =  head;
     return newNode;
 }
 
-
-Node* insertAtEnd(Node* head, int data){
+Node* insertAtEnd(Node* head,int data){
+    
     Node* newNode = new Node(data);
-    Node* temp = head;
-    while(temp->next){
-        temp = temp->next;
+    if(head== NULL){
+        return newNode;
     }
-    temp->next = newNode;
-    return head;
+    else{
+        Node* temp = head;
+        while(temp->next!=NULL){
+            temp = temp->next;
+        }
+        temp->next = newNode;
+        return head;
+    }
 }
 
-Node* insertAtPosition(Node* head, int pos, int data){
+Node* insertAtPosition(Node* head,int pos,int data){
+    Node* newNode = new Node(data);
     Node* temp = head;
-    for(int i = 1; i<pos-1;i++){
+    for(int i = 1; i <pos-1;i++){
         temp = temp->next;
     }
-    Node* newNode = new Node(data);
     newNode->next = temp->next;
     temp->next = newNode;
     return head;
@@ -61,10 +66,10 @@ Node* insertAtPosition(Node* head, int pos, int data){
 
 Node* reverse(Node* head){
     Node* temp = head;
-    Node* next = NULL;
+    Node* next;
     Node* prev = NULL;
     while(temp!=NULL){
-        next = temp->next;
+        next = temp->next;//save next
         temp->next = prev;
         prev = temp;
         temp = next;
@@ -72,42 +77,32 @@ Node* reverse(Node* head){
     return prev;
 }
 
-Node* insertBeforePosition(Node* head,int pos,int value){
-    Node* temp  = head;
-    if(pos==0){
-        insertAtBegin(head,value);
-        return head;
-    }
-    else{
-        for(int i = 1;i<pos-2;i++){
-            temp = temp->next;
-        }
-        Node* newNode = new Node(value);
-        newNode->next = temp->next;
-        temp->next = newNode;
-        return head;
-    }
-
-}
-
-void printBackward(Node* tail){
-    Node* temp = tail;
-    while(temp != NULL){
-        cout<<temp->data<<"<-";
-        temp = temp->prev;
-    }
-    cout<<"NULL";
-
-}
-
-void centerElement(Node* head){
-    Node* f,*s;
-    f = s = head;
-    while(f and f->next){
+Node* centerElement(Node*head){
+    Node *s = head,*f = head;
+    while(f && f->next){
         s = s->next;
         f = f->next->next;
     }
-    cout<<s->data<<endl;
+    cout<<s->data;
+
+}
+
+Node* deleteFromBegin(Node* head){
+    Node* temp = head;
+    head = temp->next;
+    delete temp;
+
+    return head;
+}
+
+Node* deleteFromEnd(Node* head){
+    Node* temp = head;
+    Node* prev = NULL;
+    while(temp->next->next !=NULL){
+        temp = temp->next;
+    }
+    temp->next = NULL;
+    return head;
 }
 
 int main(){
@@ -132,12 +127,13 @@ int main(){
     Node *head = n1;
 
     //Linkd List
-    head = insertAtBegin(head,100);
-    head = insertAtEnd(head,200);
-    head = insertAtPosition(head,2,300);
-    head = insertBeforePosition(head,2,400);
+    head = insertAtBegin(head,0);
+    head = insertAtEnd(head,60);
+    head = insertAtPosition(head,2,5);
     // head = reverse(head);
-    centerElement(head);
+    head = deleteFromBegin(head);
+    head = deleteFromEnd(head);
+    // centerElement(head);
     printForward(head);
     // printBackward(tail);
 
